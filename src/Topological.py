@@ -5,7 +5,6 @@ class Topological:
     """Does topological sort"""
     def __init__(self, digraph):
         finder = DirectedCycle(digraph)
-        if ()
 """public class Topological {
     private Iterable<Integer> order;    // topological order
 

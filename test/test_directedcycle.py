@@ -36,5 +36,19 @@ class TestDirectedCycle(unittest.TestCase):
         finder = DirectedCycle(d)
         self.assertEquals([3,4,5,3], finder.cycle)
 
+    def has_no_cycle(self):
+        d = Digraph()
+        d.add_edge(2, 3)
+        dc = DirectedCycle(d)
+        self.assertEquals(False, dc.has_cycle())
+
+    def has_cycle_b(self):
+        d = Digraph()
+        d.add_edge(1, 2)
+        d.add_edge(2, 3)
+        d.add_edge(3, 1)
+        dc = DirectedCycle(d)
+        self.assertEquals(True, dc.has_cycle())
+
 if __name__=="__main__":
     unittest.main()

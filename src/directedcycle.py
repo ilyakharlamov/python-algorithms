@@ -1,5 +1,5 @@
 """ Finds a directed cycle in a digraph. Runs in O(E + V) time."""
-class DirectedCycle:
+class DirectedCycle(object):
     """ Finds a directed cycle in a digraph. Runs in O(E + V) time."""
     def __init__(self, digraph ):
         vertices_count = digraph.count_vertices()
@@ -35,3 +35,7 @@ class DirectedCycle:
                 self.cycle.append(vertice_to)
                 self.cycle.append(vertice)
         self.on_stack[vertice] = False
+
+    def has_cycle(self):
+        "has cycle"
+        return len(self.cycle) > 0

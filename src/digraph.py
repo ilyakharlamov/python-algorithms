@@ -39,7 +39,6 @@ class Digraph(object):
         for tmp in [index_from, index_to]:
             if tmp < 0 or tmp >= vertices_count:
                 raise Exception("vertex %s is not between 0 and %s" %  (index_from, vertices_count-1))
-        #self.adj[index_from].append(index_to)
         self.adj[index_from].insert(0, index_to)
         self.edges_count += 1
 

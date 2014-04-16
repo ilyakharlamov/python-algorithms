@@ -5,7 +5,7 @@ class SymbolDigraph(object):
     """Like digraph but operates with strings, you can never remove edges"""
     def __init__(self):
         self.symboltable = {}
-        self.names=[]
+        self.names = []
         self.digraph = Digraph()
 
     def add_vertice(self, edge_from):

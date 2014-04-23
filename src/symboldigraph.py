@@ -3,10 +3,10 @@ from digraph import Digraph
 
 class SymbolDigraph(object):
     """Like digraph but operates with strings, you can never remove edges"""
-    def __init__(self):
+    def __init__(self,size=0):
         self.symboltable = {}
         self.names = []
-        self.digraph = Digraph()
+        self.digraph = Digraph(size)
 
     def add_vertice(self, edge_from):
         """Add named vertice"""
